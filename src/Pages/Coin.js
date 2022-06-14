@@ -64,14 +64,15 @@ const Coin=()=>{
     const [coin,setCoin] = useState();
 
     const {currency,symbol}=CryptoState();
-
+    
     const fetchCoin=async()=>{
         const {data}= await axios.get(SingleCoin(id));
         setCoin(data);
     }
-
+    
     useEffect(()=>{
         fetchCoin();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     const classes=useStyles();
