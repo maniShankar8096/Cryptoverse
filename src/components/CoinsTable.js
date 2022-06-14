@@ -84,7 +84,7 @@ const CoinsTable = () => {
                                         <TableCell
                                             style={{color:'black',fontWeight:'700',fontFamily:'Montserrat'}}
                                             key={head}
-                                            align={head==='Coin'?"":"right"}
+                                            align={head==='Coin'?"inherit":"right"}
                                         >{head}</TableCell>
                                     )}
                                 </TableRow>
@@ -128,7 +128,7 @@ const CoinsTable = () => {
                     )
                 }
             </TableContainer>
-            <Pagination count={(handleSearch()?.length/10).toFixed(0)}
+            <Pagination count={+(handleSearch()?.length/10).toFixed(0)}
             style={{
                 padding:20,
                 width:'100%',

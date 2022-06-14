@@ -1,6 +1,6 @@
 import { AppBar, Container, MenuItem, Toolbar, Typography,Select, makeStyles, createTheme,ThemeProvider } from "@material-ui/core";
 import React from "react";
-import {useNavigate} from "react-router";//useNavigate replaced useHistory
+import {useNavigate} from "react-router-dom";//useNavigate replaced useHistory
 import { CryptoState } from "../CryptoContext";
 
 const useStyles=makeStyles(()=>({
@@ -36,7 +36,7 @@ const Header=()=>{
             <AppBar color='transparent' position="static">
                 <Container>
                     <Toolbar>
-                        <Typography className={classes.title} onClick={()=>{navigate('/')}} variant='h5' >
+                        <Typography className={classes.title} onClick={()=>{navigate('/',{ replace: true })}} variant='h5' >
                         Cryptoverse
                         </Typography>
                         <Select variant='outlined' value={currency}

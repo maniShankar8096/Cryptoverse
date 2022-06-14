@@ -23,8 +23,8 @@ function App() {
      <div className={classes.app}>
       <Header/>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route path='/coins/:coinId' element={<Coin/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path='/coins/:id' element={<Coin/>}/>
         </Routes>
      </div>
     </Router>
